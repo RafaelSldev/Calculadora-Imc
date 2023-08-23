@@ -8,9 +8,6 @@
 }
 
 body {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0, 0, 0, 0.5)), url('/images/bg02.jpeg');
