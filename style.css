@@ -1,34 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: "IBM Plex Sans";
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0, 0, 0, 0.5)), url('/images/bg02.jpeg');
-    background-size: cover;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0, 0, 0, 0.85)), url('/images/bg03.jpeg');
     background-attachment: fixed;
     background-position: center;
+    background-repeat: repeat;
+}
+header{
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('images/bgtop.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 120px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+}
+header h1{
+    font-size: 80px;
+    margin: 100px auto;
+}
+nav{
+    display: flex;
+}
+a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+a h4{
+    color: white;
+}
+a img{
+    opacity: 1;
+    height: 30px;
+    margin-right: 12px;
+}
+h1{
+    font-size: 40px;
 }
 
 .calc {
     display: flex;
     justify-content: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 60px;
+    margin-top: 80px;
+    margin-bottom: 200px;
+
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-right: 200px;
+}
+#text h1{
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
 }
 
 .container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(40, 40, 40, 0.5));
+    background-image: linear-gradient(rgba(67, 67, 67, 0.457), rgba(58, 58, 58, 0.288));
     display: flex;
-    padding: 3em;
+    padding: 40px;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
-    width: 20rem;
+    width: 300px;
+    height: 430px;
 }
 
 h2 {
@@ -61,15 +121,21 @@ label {
     padding-left: 5px;
 }
 .entrada_calc > input::placeholder{
-    color: #ffffff;
-    text-align: right;
+    color: #a8a8a8;
     margin-right: 5px;
+    font-size: 15px;
 }
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0;
+}
+input{
+    outline: none;
+}
+#peso{
+    margin-bottom: 10px;
 }
 
 textarea {
@@ -82,18 +148,22 @@ textarea {
 }
 
 button {
-    width: 14rem;
-    height: 2em;
+    padding: 10px;
+    width: 200px;
     font-size: 16px;
     background-color: #ef5b05;
     border: none;
     border-radius: 10px;
     color: white;
-    margin: 20px auto 0px;
+    margin: 10px;
+    outline: none;
 }
 
 button:hover {
     cursor: pointer;
+}
+#clearInput{
+    background-color: rgb(0, 83, 208);
 }
 
 #resultado_imc {
@@ -126,28 +196,33 @@ button:hover {
     border-radius: 10px;
     text-align: center;
     padding-top: 20px;
-    color: #46fd03;
+    color: #fdbe03;
     font-size: 20px;
 }
-a{
-    display: flex;
-    align-items: center;
-    color: #fff;
-    padding: 20px;
-    text-decoration: none;
+.mkt{
+    height: 700px;
+    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url("/images/bgfit.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 400px;
 }
-a img{
-    opacity: 1;
-    margin-right: 12px;
+.mkt h1{
+    padding-top: 30px;
+}
+.mkt button{
+    background-color: rgb(0, 113, 218);
+    margin-top: 20px;
+    
+}
+.mkt a{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
 }
 footer{
     color: white;
     text-align: center;
-    margin-top: 50px;
-}
-img{
-    height: 30px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    margin: auto 10px;
+    margin: 20px;
 }

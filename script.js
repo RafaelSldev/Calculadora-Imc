@@ -10,21 +10,43 @@ function exibeImc(){
     let imc = calculo()
     let exibir = document.getElementById('resultado_imc')
     let valor = document.getElementById('valor_imc')
-    valor.innerHTML = `Seu IMC é: ${calculo().toFixed(1)}`
+    
+    if (isNaN(calculo())){
+        exibir.innerHTML = "ERRO"
+    }
 
-    if (imc <= 18.5){
-        exibir.innerHTML = "Voce está abaixo da faixa de imc esperado"
+    if (imc < 18.5){
+        valor.innerHTML = `<strong>Seu IMC é: ${calculo().toFixed(1)}</strong>`
+        exibir.innerHTML = "Peso baixo"
     }
-    if (18.5 < imc && imc <= 24.9){
-        exibir.innerHTML = "Voce está na faixa de imc esperado"
+    if (18.6 < imc && imc <= 24.9){
+        valor.innerHTML = `<strong>Seu IMC é: ${calculo().toFixed(1)}</strong>`
+        exibir.innerHTML = "Normal"
     }
-    if (24.9 < imc && imc <= 29.9){
-        exibir.innerHTML = "Voce está abaixo da faixa de imc classificado como sobrepeso"
+    if (25 < imc && imc <= 29.9){
+        valor.innerHTML = `<strong>Seu IMC é: ${calculo().toFixed(1)}</strong>`
+        exibir.innerHTML = "Sobrepeso"
     }
-    if (29.9 < imc && imc <= 39.9){
-        exibir.innerHTML = "Voce está abaixo da faixa de imc classificado como obesidade"
+    if (30 < imc && imc <= 39.9){
+        valor.innerHTML = `<strong>Seu IMC é: ${calculo().toFixed(1)}</strong>`
+        exibir.innerHTML = "Obesidade"
     }
     if (imc > 39.9){
-        exibir.innerHTML = "Voce está abaixo da faixa de imc classificado como obesidade mórbida"
+        valor.innerHTML = `<strong>Seu IMC é: ${calculo().toFixed(1)}</strong>`
+        exibir.innerHTML = "Obesidade Mórbida"
     }
+}
+function clearInput(){
+    var altura = document.getElementById('altura')
+    var peso = document.getElementById('peso')
+    var exibir = document.getElementById('resultado_imc')
+    var valor = document.getElementById('valor_imc')
+
+    if(altura != "" || peso != "" || exibir != "" || valor != ""){
+        altura.value = ""
+        peso.value = ""
+        exibir.innerHTML = ""
+        valor.innerHTML = ""
+    }
+    
 }

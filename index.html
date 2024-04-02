@@ -5,38 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <a href="https://github.com/RafaelSldev" target="_blank">
-        <img class="git" src="/images/git.png" alt="icon">
-        <h4>RafaelSlDev</h4>
-    </a>
+    
+    <header>
+        <nav>
+            <a href="https://github.com/RafaelSldev" target="_blank" ><img src="/images/git.png" alt=""><h4>RafaelSldev</h4></a>
+        </nav>
+        <h1>CHECK SEU PESO<br><span style="color: orangered;">IDEAL</span></h1>
+    </header>
+
+    <h1 style="color: white; text-align: center; font-size: 50px;">CALCULADORA DE IMC</h1>
+
     <div class="calc">
+
+        <div id="text">
+            <h1 style="color: white;">O que é IMC?</h1>
+            <p><strong>IMC</strong> é uma sigla e significa <strong>"<span style="color: orangered;">Índice de Massa Corporal</span>”</strong>.
+                <br>O IMC é uma das formas de avaliação corporal recomendada pela OMS (Organização Mundial de Saúde)
+                <br>para classificação do estado antropométrico, ou seja, <br>da composição corporal do indivíduo.
+                <br>Uma fórmula utilizada por vários profissionais de saúde, <br>incluindo médicos, nutricionistas,
+                profissionais de educação física e enfermeiros, para saber, de uma forma rápida, se a pessoa
+                está com o peso adequado ou se precisa ganhar ou perder peso.
+                <br><br>Para mulheres, o <strong>índice ideal</strong> deve ficar entre <span style="color: rgb(218, 0, 164);">19 e 24</span> .
+                Para os homens, entre<span style="color: rgb(0, 94, 255);"> 19 e 25</span> .
+            </p>
+            <br>
+            <h2 style="color: white;">Você está no seu peso <span style="color: orangered;">ideal</span> ?</h2>
+        </div>
+
         <div class="container">
-            <h2>Calcule o seu IMC</h2>
             <div class="entrada_calc">
-                <label for="altura">Altura:</label>
-                <input id="altura" type="number" placeholder="M">
+                <label for="altura">Altura(m):</label>
+                <input id="altura" type="number" placeholder="ex: 1,70">
             </div>
             <div class="entrada_calc">
-                <label for="peso"> Peso:</label>
-                <input id="peso" type="number" placeholder="Kg">
+                <label for="peso"> Peso(kg):</label>
+                <input id="peso" type="number" placeholder="ex: 70">
             </div>
 
             <button onclick="exibeImc()">Calcular</button>
+            <button onclick="clearInput()" id="clearInput">Limpar</button>
             <div id="valor_imc"></div>
             <div id="resultado_imc"></div>
+
+
         </div>
 
     </div>
 
+    <section class="mkt">
+        <h1 style="color: white;"><span style="color: rgb(255, 106, 0)">BAIXE AGORA</span> NOSSOS CARDÁPIOS COM VÁRIAS <br>DIETAS</h1>
+        <div>
+            <h3 style="color: white; margin-top: 120px; font-size: 20px;">Clique no botão abaixo</h3>
+            <a href="/CARDÁPIOS.zip" download="cardápios.zip"><button>Download Aqui</button></a>
+            <br>
+            <p style="font-weight: 600; font-size: 18px;">(Contém vários pdf's com cardápios low carb)</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5585997692541?text=Quero%20orçamento%20de%20uma%20Landing%20Page." style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin: 0 auto" class="fa fa-whatsapp"></i>
+</a>
+
+    
+
 </body>
 
 <footer>
-    <h4>• C o p y r i g h t © - 2023 •</h4>
+    <h4>• RAFAELSILVADEV - SINCE 2021 •</h4>
 </footer>
 
 <script src="script.js"></script>
