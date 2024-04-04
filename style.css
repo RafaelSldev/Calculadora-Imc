@@ -200,12 +200,14 @@ button:hover {
     font-size: 20px;
 }
 .mkt{
-    height: 700px;
+    height: 500px;
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url("/images/bgfit.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     margin-bottom: 400px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 .mkt h1{
     padding-top: 30px;
@@ -222,7 +224,12 @@ button:hover {
     margin: 0 auto;
 }
 footer{
-    color: white;
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: rgb(25, 25, 25);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    color: orangered;
 }
